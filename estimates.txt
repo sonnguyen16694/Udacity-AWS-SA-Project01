@@ -1,0 +1,8 @@
+1. Minimum RTO for a single AZ outage: 
+	- If you enable multi-AZ configuration for DB instances, then when you encounter any failed with DB instances, the AWS RDS will automatically switch to another AZ in a few minutes. 
+2. Minimum RTO for a single region outage:
+	- We will have a support team that is ready 24/7. When they received an alert from AWS CloudWatch, then they will be ready to connect to the system to diagnose in 25 minutes at most (by night) and then they will find the problem in 10-15 minutes then fix it in 10 minutes.
+3. Minimum RPO for a single AZ outage:
+    	- If we enable multi-AZ configuration for DB instances, then it only takes a few minutes to switch to another AZ, so only a few minutes of data will be lost.
+4. Minimum RPO for a single region outage:
+    	- If we enabled AWS RDS automatic backups, then the minimum RPO will be the backup time that you set. For example: if you set backup every 1 hour then the minimum RPO will be 1 hour

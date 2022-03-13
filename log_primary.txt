@@ -1,0 +1,40 @@
+Using username "ec2-user".
+Authenticating with public key "imported-openssh-key"
+Last login: Sat Feb 19 15:15:33 2022 from 27.79.199.238
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux 2 AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-2/
+[ec2-user@ip-10-1-10-65 ~]$ mysql -h primarydb.crwwnx2hzhpu.ap-southeast-1.rds.a                                                                                                                     mazonaws.com -u admin -p udacity
+Enter password:
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MySQL connection id is 44
+Server version: 8.0.27 Source distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MySQL [udacity]> CREATE TABLE demo_udacity(
+    -> id INT NOT NULL AUTO_INCREMENT,
+    -> title VARCHAR(100) NOT NULL,
+    -> PRIMARY KEY (id));
+Query OK, 0 rows affected (0.07 sec)
+
+MySQL [udacity]> insert into demo_udacity (title) values ('demo 01');
+Query OK, 1 row affected (0.01 sec)
+
+MySQL [udacity]> select * from demo_udacity;
++----+---------+
+| id | title   |
++----+---------+
+|  1 | demo 01 |
++----+---------+
+1 row in set (0.00 sec)
+
+MySQL [udacity]>
